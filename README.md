@@ -120,7 +120,7 @@ Submit bug fixes to https://github.com/wez/atomicparsley
 ```
 
 ```txt
-To write unconvential tags use "--rDNSatom" command:
+To write unconventional tags use "--rDNSatom" command:
 
 AtomicParsley "Black_Sabbath_-_Age_of_Reason_-_original.m4a" \
 --rDNSatom "false" name=liq_longtail domain=com.apple.iTunes --overWrite \
