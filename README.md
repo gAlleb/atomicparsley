@@ -12,6 +12,11 @@ setting metadata into MPEG-4 files, in particular, iTunes-style metadata.
 * Navigate to the [latest release](https://github.com/gAlleb/atomicparsley/releases)
 * Download the `AtomicParsleyMacOS.zip` file and extract `AtomicParsley`
 
+### macOS (x86-64) Intel
+
+* Navigate to the [latest release](https://github.com/gAlleb/atomicparsley/releases)
+* Download the `AtomicParsleyMacOS.zip` file and extract `AtomicParsley`
+
 ### Windows
 
 * Navigate to the [latest release](https://github.com/gAlleb/atomicparsley/releases)
