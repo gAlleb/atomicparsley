@@ -15,7 +15,7 @@ setting metadata into MPEG-4 files, in particular, iTunes-style metadata.
 ### macOS (x86-64) Intel
 
 * Navigate to the [latest release](https://github.com/gAlleb/atomicparsley/releases)
-* Download the `AtomicParsleyMacOS.zip` file and extract `AtomicParsley`
+* Download the `AtomicParsleyMac_x86_64_intel.zip` file and extract `AtomicParsley`
 
 ### Windows
 
@@ -117,6 +117,34 @@ Setting ID3 tags onto mpeg-4 files: see --ID3-help
 AtomicParsley version: 20221229.172126.0 d813aa6e0304ed3ab6d92f1ae96cd52b586181ec (utf8)
 
 Submit bug fixes to https://github.com/wez/atomicparsley
+```
+
+```txt
+To write unconvential tags use "--rDNSatom" command:
+
+AtomicParsley "Black_Sabbath_-_Age_of_Reason_-_original.m4a" \
+--rDNSatom "false" name=liq_longtail domain=com.apple.iTunes --overWrite \
+--rDNSatom "419.3" name=liq_cue_duration domain=com.apple.iTunes --overWrite \
+--rDNSatom  "0.4" name=liq_cue_in domain=com.apple.iTunes --overWrite \
+--rDNSatom "419.7" name=liq_cue_out domain=com.apple.iTunes  --overWrite \
+--rDNSatom "-11.83 dB" name=liq_amplify domain=com.apple.iTunes --overWrite \
+--rDNSatom "418.3" name=liq_cross_start_next domain=com.apple.iTunes --overWrite \
+--rDNSatom "-18 LUFS" name=liq_reference_loudness domain=com.apple.iTunes --overWrite \
+-o "Black_Sabbath_-_Age_of_Reason_-_modified.m4a"
+
+or drop the "-o" - then tags will be updated in the original file.
+
+
+Tags written:
+
+----:com.apple.iTunes:liq_amplify=MP4FreeForm(b'-11.83 dB', <AtomDataType.UTF8: 1>)
+----:com.apple.iTunes:liq_cross_start_next=MP4FreeForm(b'418.3', <AtomDataType.UTF8: 1>)
+----:com.apple.iTunes:liq_cue_duration=MP4FreeForm(b'419.3', <AtomDataType.UTF8: 1>)
+----:com.apple.iTunes:liq_cue_in=MP4FreeForm(b'0.4', <AtomDataType.UTF8: 1>)
+----:com.apple.iTunes:liq_cue_out=MP4FreeForm(b'419.7', <AtomDataType.UTF8: 1>)
+----:com.apple.iTunes:liq_longtail=MP4FreeForm(b'false', <AtomDataType.UTF8: 1>)
+----:com.apple.iTunes:liq_reference_loudness=MP4FreeForm(b'-18 LUFS', <AtomDataType.UTF8: 1>)
+
 ```
 
 ## Build from Source
